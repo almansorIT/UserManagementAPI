@@ -1,0 +1,46 @@
+GET http://localhost:5214/api/users/
+Authorization: Bearer secret-api-token-12345
+
+###
+GET http://localhost:5214/api/data
+ValidToken: "Bearer secret-api-token-12345"
+
+###
+GET http://localhost:5214/api/data
+ValidToken: "Bearer secret-api-token-12345"
+
+###
+GET http://localhost:5214/api/users/2
+Content-Type: application/json
+Authorization: Bearer secret-api-token-12345
+
+###
+POST http://localhost:5214/api/users
+Authorization: Bearer secret-api-token-12345
+Content-Type: application/json
+
+{
+  "username": "aloosh",
+  "email": "aloosh@example.com"
+}   
+###
+GET http://localhost:5214/api/users/1  
+###
+GET http://localhost:5214/api/users/9999    
+
+###
+//delete user with id 1
+DELETE http://localhost:5214/api/users/1
+Authorization: Bearer secret-api-token-12345
+
+//update user with id 2
+###
+PUT http://localhost:5214/api/users/1
+Content-Type: application/json
+Authorization: Bearer secret-api-token-12345
+
+{
+  
+  "username": "updateduser",
+  "email": "updateduser@example.com"
+}
